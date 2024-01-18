@@ -1,5 +1,6 @@
 import sys
 
+
 def error_message_detail(error, error_detail: sys):
     """
     Generates a detailed error message with file name, line number, and error message.

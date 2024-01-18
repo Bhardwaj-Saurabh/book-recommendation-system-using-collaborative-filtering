@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from typing import List
 
-HYPEN_E_DOT = '-e .'
+HYPEN_E_DOT = "-e ."
 
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
@@ -10,19 +10,21 @@ with open("README.md", "r", encoding="utf-8") as f:
 REPO_NAME = "book-recommendation-system-using-collaborative-filtering"
 SRC_REPO = "src"
 
+
 # funtion to add requirement to the list
-def get_requirements()->List[str]:
-    '''
+def get_requirements() -> List[str]:
+    """
     Returns the list of requirements
-    '''
-    requirement_list:List[str] = []
-    with open('requirements.txt', 'r') as r:
+    """
+    requirement_list: List[str] = []
+    with open("requirements.txt", "r") as r:
         requirements = r.read()
-    for requirement in requirements.split('\n'):
+    for requirement in requirements.split("\n"):
         requirement_list.append(requirement)
     if HYPEN_E_DOT in requirement_list:
         requirement_list.remove(HYPEN_E_DOT)
     return requirement_list
+
 
 setup(
     name=REPO_NAME,
@@ -36,5 +38,5 @@ setup(
     packages=find_packages(),
     license="MIT",
     python_requires=">=3.7",
-    install_requires=get_requirements()
+    install_requires=get_requirements(),
 )

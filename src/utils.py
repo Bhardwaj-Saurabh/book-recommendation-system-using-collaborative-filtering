@@ -25,7 +25,7 @@ def save_object(file_path, obj):
         os.makedirs(dir_path, exist_ok=True)
 
         # Save the object to the file
-        with open(file_path, 'wb') as file_obj:
+        with open(file_path, "wb") as file_obj:
             pickle.dump(obj, file_obj)
 
     except Exception as e:
@@ -46,7 +46,7 @@ def load_object(file_path):
         CustomException: If an error occurs while loading the object.
     """
     try:
-        with open(file_path, 'rb') as file_obj:
+        with open(file_path, "rb") as file_obj:
             return pickle.load(file_obj)
 
     except Exception as e:

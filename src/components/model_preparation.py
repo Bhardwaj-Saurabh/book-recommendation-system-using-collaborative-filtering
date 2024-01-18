@@ -20,7 +20,8 @@ class ModelTrainerConfig:
     Attributes:
         train_model_file_path (str): The file path to save the trained model.
     """
-    train_model_file_path: str = os.path.join('artifacts', 'model.pkl')
+
+    train_model_file_path: str = os.path.join("artifacts", "model.pkl")
 
 
 class ModelTrainer:
@@ -45,7 +46,6 @@ class ModelTrainer:
             CustomException: If an exception occurs during model training and evaluation.
         """
         try:
-
             # Load the sparse matrix
             logging.info("Load the sparse matrix")
             user_book_matrix = load_object(user_book_matrix)
@@ -54,9 +54,11 @@ class ModelTrainer:
             # Creating a sparse matrix from the user-book matrix
             sparse_user_book_matrix = csr_matrix(user_book_matrix)
 
-            logging.info("Initializing the NearestNeighbors model with 'brute' algorithm")
+            logging.info(
+                "Initializing the NearestNeighbors model with 'brute' algorithm"
+            )
             # Initializing the NearestNeighbors model with 'brute' algorithm
-            nearest_neighbors_model = NearestNeighbors(algorithm='brute')
+            nearest_neighbors_model = NearestNeighbors(algorithm="brute")
 
             # Fitting the model to the sparse user-book matrix
             logging.info("Fitting the model to the sparse user-book matrix")
@@ -67,7 +69,7 @@ class ModelTrainer:
             # Save the best model
             save_object(
                 file_path=self.model_training_config.train_model_file_path,
-                obj=nearest_neighbors_model
+                obj=nearest_neighbors_model,
             )
         except Exception as e:
             raise CustomException(e, sys)

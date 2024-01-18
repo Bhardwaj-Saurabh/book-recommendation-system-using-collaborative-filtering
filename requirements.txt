@@ -1,0 +1,21 @@
+
+# Core libraries for data analysis and manipulation
+pandas>=1.1.0
+numpy>=1.19.1
+
+# Libraries for data visualization
+matplotlib>=3.3.1
+seaborn>=0.10.1
+
+# Machine learning library for model building
+scikit-learn>=0.23.2
+
+# Library for handling sparse matrices
+scipy>=1.5.2
+
+# Web application framework
+streamlit
+
+# Other libraries as needed by project
+# For example, if you are not using colab
+# jupyterlab>=2.2.6

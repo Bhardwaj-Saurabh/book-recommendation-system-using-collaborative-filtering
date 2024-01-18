@@ -1,16 +1,11 @@
 import os
 import sys
-from src.logger import logging  # Importing custom logger module
-from src.exception import CustomException  # Importing custom exception module
-
-import pandas as pd  # Importing pandas library 
-from sklearn.model_selection import train_test_split  
-
-# Importing dataclass decorator from dataclasses module
+from src.logger import logging 
+from src.exception import CustomException
+import pandas as pd 
 from dataclasses import dataclass  
 
 ## Data Ingestion configuration
-
 @dataclass
 class DataIngestionConfig:
     """

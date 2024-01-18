@@ -19,3 +19,6 @@ streamlit
 # Other libraries as needed by project
 # For example, if you are not using colab
 # jupyterlab>=2.2.6
+black
+pylint
+

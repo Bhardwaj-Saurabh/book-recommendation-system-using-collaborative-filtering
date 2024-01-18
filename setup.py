@@ -6,7 +6,6 @@ with open("README.md", "r", encoding="utf-8") as f:
 ## edit below variables as per your requirements -
 REPO_NAME = "book-recommendation-system-using-collaborative-filtering"
 SRC_REPO = "src"
-LIST_OF_REQUIREMENTS = ['streamlit', 'numpy']
 
 # funtion to add requirement to the list
 def get_requirements()->List[str]:

@@ -1,4 +1,7 @@
-from setuptools import setup
+from setuptools import setup, find_packages
+from typing import List
+
+HYPEN_E_DOT = '-e .'
 
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
@@ -30,7 +33,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/Bhardwaj-Saurabh/book-recommendation-system-using-collaborative-filtering",
     author_email="aryan.saurabhbhardwaj@gmail.com",
-    packages=[SRC_REPO],
+    packages=find_packages(),
     license="MIT",
     python_requires=">=3.7",
     install_requires=get_requirements()

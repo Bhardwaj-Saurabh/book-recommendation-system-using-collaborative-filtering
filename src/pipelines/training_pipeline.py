@@ -13,7 +13,7 @@ if __name__ == "__main__":
     books_df, users_df, ratings_df = obj.initiate_data_ingestion()
     # print(books_df, users_df, ratings_df)
     data_transformation = DataTransformation()
-    ratings, pivot_table = data_transformation.initiate_data_transformation(
+    ratings, pivot_table, books_title = data_transformation.initiate_data_transformation(
         books_df, users_df, ratings_df
     )
     model_trainer = ModelTrainer()

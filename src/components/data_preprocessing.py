@@ -21,6 +21,7 @@ class DataTransformationConfig:
 
     ratings_object_file_path: str = os.path.join("artifacts", "ratings.pkl")
     pivot_table_object_file_path: str = os.path.join("artifacts", "book_pivot.pkl")
+    books_title_object_file_path: str = os.path.join("artifacts", "books_title.pkl")
 
 
 class DataTransformation:
@@ -115,6 +116,10 @@ class DataTransformation:
             logging.info("Filling missing values in the pivot table with 0")
             user_book_matrix.fillna(0, inplace=True)
 
+            # Extracting book titles from the user-book matrix
+            logging.info("Extracting book titles from the user-book matrix")
+            book_titles = user_book_matrix.index
+
             # Logging info message
             logging.info("Saving the Final Ratings and Pivot Table objects")
 
@@ -129,9 +134,16 @@ class DataTransformation:
                 obj=user_book_matrix,
             )
 
+            save_object(
+                # Save the pivot table objects
+                file_path=self.data_transformation_config.books_title_object_file_path,
+                obj=book_titles,
+            )
+
             return (
                 self.data_transformation_config.ratings_object_file_path,
                 self.data_transformation_config.pivot_table_object_file_path,
+                self.data_transformation_config.books_title_object_file_path,
             )
 
         except Exception as e:

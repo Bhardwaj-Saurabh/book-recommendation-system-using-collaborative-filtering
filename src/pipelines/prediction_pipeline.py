@@ -1,11 +1,7 @@
-'''
-Author: Saurabh Bhardwaj
-Email: aryan.saurabhbhardwaj@gmail.com
-Date: 19 Jan 2024
-'''
 
 import numpy as np
 from src.utils import load_object
+from src.logger import logging
 
 logging.info("Loading trained model")
 model = load_object('artifacts/model.pkl')
@@ -33,7 +29,7 @@ def fetch_poster(suggestion):
         ids_index.append(ids)
 
     for idx in ids_index:
-        url = final_rating.iloc[idx]['image_url']
+        url = final_rating.iloc[idx]['url']
         poster_url.append(url)
 
     return poster_url

@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_d1f5a9ab063f4d55a6347d8a7be29eab }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_892ebf1a356649baa7faa619c7eccc20 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_03699dab5f524c00b71e1ce93421b8ef }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_7f08418b6b4c40ec83fd77fafd90201c }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d1f5a9ab063f4d55a6347d8a7be29eab }}/bookrecommendation:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_03699dab5f524c00b71e1ce93421b8ef }}/aryansaurabhbhardwaj/bookrecommendation:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'bookrecommendapp'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_9777e6a80ee047f9b44d62da40528b69 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d1f5a9ab063f4d55a6347d8a7be29eab }}/bookrecommendation:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_001513294d144569adbeb5100d3703f9 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_03699dab5f524c00b71e1ce93421b8ef }}/aryansaurabhbhardwaj/bookrecommendation:${{ github.sha }}'

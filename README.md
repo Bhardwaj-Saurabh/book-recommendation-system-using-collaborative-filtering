@@ -2,6 +2,8 @@
 
 An end-to-end Data Science project to build a Book Recommendation System using Collaborative Filtering with clustering deployed using Dockers, Github Action and Azure Web App.
 
+<img src="images/bookrecommend.webp">
+
 ## 1. Problem Statement
 In the digital age, readers are faced with an overwhelming abundance of book choices, making it challenging to discover new titles that align with their interests and preferences. Traditional methods of book selection often rely on manual browsing, which can be time-consuming and inefficient. Furthermore, generic recommendations provided by online platforms may not cater to the unique tastes of individual readers, leading to a less satisfying reading experience. Consequently, there is a need for a more personalized, efficient, and user-friendly method of discovering books that aligns with individual reader's tastes and preferences.
 

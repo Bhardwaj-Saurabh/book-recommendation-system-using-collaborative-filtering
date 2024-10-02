@@ -56,18 +56,28 @@ The following steps were taken to preprocess the data for modeling:
 ---
 
 ## 🛠️ 6. Methodology
+
 <img src="images/modelarc.png" alt="Model Architecture"> 
 
 ### Key Steps:
 1. **Data Ingestion**: Ingest data and split into training/testing datasets.
+
 2. **Data Preprocessing**: Handle missing values, engineer features.
+
 3. **Model Building**: Compare several models and select the best one based on performance (e.g., K-Nearest Neighbors).
+
    <img src="images/k-neighbour.png" width="700" height="500" alt="K-Nearest Neighbors">
-4. **Web Application**: Developed using Streamlit for inference.
+   
+5. **Web Application**: Developed using Streamlit for inference.
+
    <img src="images/bookrecomendation2.png" alt="Web Application">
-5. **CI/CD Pipeline**: Automated using GitHub Actions for continuous integration and deployment.
+   
+6. **CI/CD Pipeline**: Automated using GitHub Actions for continuous integration and deployment.
+
    <img src="images/github-action-deployes.png" alt="CI/CD Pipeline">
-6. **Deployment**: Hosted on Azure Web App Services.
+   
+8. **Deployment**: Hosted on Azure Web App Services.
+
    <img src="images/azure-web-app.png" alt="Azure Web App">
 
 ---
